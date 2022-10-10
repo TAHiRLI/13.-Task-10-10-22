@@ -1,0 +1,68 @@
+
+@import 'partials/extends';
+@import 'partials/variables';
+
+header{
+    background-image: url(../images/Main-slider_pattern.jpg);
+    background-size: 100%;
+    height: 100vh;
+
+    .top-nav{
+        border-bottom: 1px solid rgb(221 221 221 / 42%);    
+
+    .right-top {
+
+        .social-media{
+            
+
+            li{
+                display: inline-block;
+                padding: 0 .5rem;
+                a{
+                    transition: .3s;
+                    text-decoration: none;
+                    color: silver;
+                    &:hover{
+                        color: gray;
+                    }
+                }
+
+            }
+        }
+
+        .gradient-btn{
+            @extend %btn-gradient;
+           
+        }
+    }
+    }
+    nav{
+         .dropdown-menu {
+            background-color: white;
+            width: 2    80%;
+            position: absolute;
+            top: -10px !important;
+            left: 0px !important;
+         }
+
+         #navbar{
+            li{
+
+                &:hover{
+                    a{
+
+                        color: $blue !important; 
+                    }
+                    
+                }
+
+            }
+         }
+
+
+
+    }
+   
+}
+
+

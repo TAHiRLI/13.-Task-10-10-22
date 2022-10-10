@@ -1,0 +1,41 @@
+
+
+%btn-gradient{
+    position: relative;
+    overflow: hidden;
+    padding: .6rem 1.7rem;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: white;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    
+ 
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 200%;
+        height: 100%;
+        transition: all 0.4s ease-in-out;
+        background-image: linear-gradient(
+          to right,
+          #d01498,
+          #647ecb,
+          #647ecb,
+          #d01498
+        );
+
+        z-index: -1;
+
+    }
+
+
+  &:hover::before {
+    left: -100%;
+  }
+}

@@ -1,0 +1,57 @@
+header .top-nav .right-top .gradient-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0.6rem 1.7rem;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: white;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+header .top-nav .right-top .gradient-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 200%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(to right, #d01498, #647ecb, #647ecb, #d01498);
+  z-index: -1;
+}
+header .top-nav .right-top .gradient-btn:hover::before {
+  left: -100%;
+}
+
+header {
+  background-image: url(../images/Main-slider_pattern.jpg);
+  background-size: 100%;
+  height: 100vh;
+}
+header .top-nav {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.42);
+}
+header .top-nav .right-top .social-media li {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+header .top-nav .right-top .social-media li a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: silver;
+}
+header .top-nav .right-top .social-media li a:hover {
+  color: gray;
+}
+header nav .dropdown-menu {
+  background-color: white;
+  width: 2 80%;
+  position: absolute;
+  top: -10px !important;
+  left: 0px !important;
+}
+header nav #navbar li:hover a {
+  color: #3074f6 !important;
+}/*# sourceMappingURL=main.css.map */
