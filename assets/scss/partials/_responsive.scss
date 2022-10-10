@@ -1,0 +1,27 @@
+@media (max-width:992px) {
+    .slogan{
+        font-size: 30px;
+    }
+    .items, .collectors{
+        grid-template-columns: 1fr 1fr !important;
+        padding: 0 20px;
+    }
+    
+}
+@media (min-width:992px) and (max-width:1200px) {
+    .items, .collectors{
+        grid-template-columns: 1fr 1fr !important;
+        padding: 0 20px;
+    }
+}
+@media (max-width:768px)  {
+    .items, .collectors{
+        grid-template-columns: 1fr !important;
+        padding: 0 20px;
+    }
+}
+@media (max-width:572px)  {
+   .top-nav{
+    display: none;
+   }
+}

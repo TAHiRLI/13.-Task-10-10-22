@@ -46,10 +46,35 @@
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 992px) {
+  .slogan {
+    font-size: 30px;
+  }
+  .items, .collectors {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .items, .collectors {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .items, .collectors {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 572px) {
+  .top-nav {
+    display: none;
+  }
+}
 * ::-moz-selection {
   background-color: #d01498 !important;
 }
-
 * ::selection {
   background-color: #d01498 !important;
 }
@@ -82,7 +107,7 @@
 header {
   background-image: url(../images/Main-slider_pattern.jpg);
   background-size: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 header .top-nav {
   border-bottom: 1px solid rgba(221, 221, 221, 0.42);
