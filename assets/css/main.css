@@ -1,7 +1,8 @@
-header .top-nav .right-top .gradient-btn {
+.gradient-btn {
+  white-space: nowrap;
   position: relative;
   overflow: hidden;
-  padding: 0.6rem 1.7rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 5px;
   z-index: 1;
   background-color: white;
@@ -10,7 +11,7 @@ header .top-nav .right-top .gradient-btn {
   text-align: center;
   font-weight: bold;
 }
-header .top-nav .right-top .gradient-btn::before {
+.gradient-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,8 +22,28 @@ header .top-nav .right-top .gradient-btn::before {
   background-image: linear-gradient(to right, #d01498, #647ecb, #647ecb, #d01498);
   z-index: -1;
 }
-header .top-nav .right-top .gradient-btn:hover::before {
+.gradient-btn:hover::before {
   left: -100%;
+}
+
+.text-hover-blue {
+  transition: 0.3s;
+  color: white !important;
+}
+.text-hover-blue:hover {
+  color: #3074f6 !important;
+}
+
+.slogan {
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.p-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header {
@@ -52,6 +73,68 @@ header nav .dropdown-menu {
   top: -10px !important;
   left: 0px !important;
 }
+header nav #navbar li {
+  position: relative;
+}
+header nav #navbar li .submenu {
+  transition: 0.3s ease-in-out;
+  transform: scale(0);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 350px;
+  height: 40vh;
+  background-color: white;
+}
 header nav #navbar li:hover a {
   color: #3074f6 !important;
+}
+header nav #navbar li:hover .submenu {
+  transform: scale(1);
+}
+
+main {
+  height: 200vh;
+}
+main .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+main .items .item {
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+main .items .item:hover {
+  transition: 0.5s;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.17);
+}
+main .items .item:hover .btn-add {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .items .item a {
+  color: black;
+}
+main .items .item a:hover {
+  color: #3074f6 !important;
+}
+main .items .item i {
+  transition: 0.3s;
+}
+main .items .item i:hover {
+  color: gray;
+}
+main .items .item .item-title {
+  border-bottom: 1px solid silver;
+}
+main .items .item .btn-add {
+  transition: 0.5s;
+  opacity: 0;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=main.css.map */

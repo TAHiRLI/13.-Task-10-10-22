@@ -1,0 +1,25 @@
+@import 'variables';
+.text-hover-blue{
+transition: 0.3s;
+    color: white !important ;
+    &:hover{
+        color: $blue !important;
+    }
+
+}
+
+.slogan{
+    font-size: 55px;
+    font-weight: 600;
+
+}
+.gradient-btn{
+    @extend %btn-gradient;
+   
+}
+.p-center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

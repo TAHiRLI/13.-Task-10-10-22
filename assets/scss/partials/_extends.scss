@@ -1,9 +1,10 @@
 
 
 %btn-gradient{
+    white-space: nowrap;
     position: relative;
     overflow: hidden;
-    padding: .6rem 1.7rem;
+    padding: .7rem 1.8rem;
     border-radius: 5px;
     z-index: 1;
     background-color: white;
@@ -39,3 +40,4 @@
     left: -100%;
   }
 }
+

@@ -1,6 +1,7 @@
 
 @import 'partials/extends';
 @import 'partials/variables';
+@import 'partials/customClasses';
 
 header{
     background-image: url(../images/Main-slider_pattern.jpg);
@@ -30,10 +31,7 @@ header{
             }
         }
 
-        .gradient-btn{
-            @extend %btn-gradient;
-           
-        }
+     
     }
     }
     nav{
@@ -47,15 +45,30 @@ header{
 
          #navbar{
             li{
+                position: relative;
+                
+              
+                
 
-                &:hover{
+                .submenu{
+                    transition: 0.3s ease-in-out;
+                    transform: scale(0);
+                    position: absolute;
+                       top: 50px;
+                    left: 0;
+                    width: 350px;
+                    height: 40vh;
+                    background-color: white;
+                }
+                 &:hover{
                     a{
-
                         color: $blue !important; 
+                    }
+                    .submenu{
+                        transform: scale(1);
                     }
                     
                 }
-
             }
          }
 
@@ -63,6 +76,55 @@ header{
 
     }
    
+}
+
+main{
+    height: 200vh;
+
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        .item{
+            cursor: pointer;
+            box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+            &:hover{
+                transition: 0.5s;
+               transform: translateY(-3px);
+                box-shadow: 0 0 25px rgb(0 0 0 / 17%);
+                .btn-add{
+                    opacity: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            a{
+                color: black;
+                &:hover{
+                    color: $blue !important;
+                }
+            }
+            i{
+                transition: 0.3s;
+                &:hover{
+                    color: gray;
+                }
+            }
+            .item-title{
+                border-bottom: 1px solid silver;
+            }
+            .btn-add{
+                transition: 0.5s;
+                opacity: 0; 
+              top: 55%;
+              left: 50%;
+              transform: translateX(-50%);
+
+            }
+        }
+    }
+  
 }
 
 
