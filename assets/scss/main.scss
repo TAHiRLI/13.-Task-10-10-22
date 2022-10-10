@@ -3,6 +3,11 @@
 @import 'partials/variables';
 @import 'partials/customClasses';
 
+*{
+    ::selection{
+        background-color: $pink !important;
+    }
+}
 header{
     background-image: url(../images/Main-slider_pattern.jpg);
     background-size: 100%;
@@ -44,21 +49,52 @@ header{
          }
 
          #navbar{
+
             li{
                 position: relative;
-                
-              
+                a.nav-link{
+                   padding : 20px 0;
+                }
+               
+               
                 
 
                 .submenu{
+                    padding: 30px 10px; 
                     transition: 0.3s ease-in-out;
                     transform: scale(0);
                     position: absolute;
-                       top: 50px;
-                    left: 0;
-                    width: 350px;
-                    height: 40vh;
+                    top: 60px;
+                    left: -10px;
+                 
+                    width: 500px;
                     background-color: white;
+                    ul{
+                        li{
+                            padding: .3rem 0 ;
+                            a{
+                                color: black !important;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $pink !important;
+                                }
+
+                            }
+                        }
+                    }
+                }
+                .submenu::before{
+                    content: '';
+                    width: 10px;
+                    height: 20px;
+                    background-color: white;
+                    border: none;
+                    outline: none;
+                    position: absolute;
+                    transform: rotate(45deg);
+                    top: -7px;
+                    left: 50px;
+                    
                 }
                  &:hover{
                     a{
@@ -75,13 +111,18 @@ header{
 
 
     }
+    .text-gradient{
+        color: transparent !important;
+        background: linear-gradient(to right, #D01498,#647ECB) !important;
+        background-clip: text!important;
+    }
    
 }
 
 main{
-    height: 200vh;
-
-    .items{
+  
+    #items-sec{
+        .items{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 15px;
@@ -123,7 +164,64 @@ main{
 
             }
         }
+    } 
     }
+    #trending-sec{
+       background-color: #fafafa;  
+       .collectors{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2%;
+        row-gap: 15px;
+        .collector{
+            &:hover{
+                img{
+                    transform: translateY(-3px);
+                }
+            }
+            a:hover{
+                color: $blue !important;
+            }
+            img{
+                transition: 0.3s;
+                cursor: pointer ;
+            }
+        }
+
+    }
+
+    }
+    #services{
+  
+        .bg-img{
+        background-image: url(https://enefti.modeltheme.com/wp-content/uploads/2022/02/Main-services_bg.jpg?id=6716);
+        background-size: 100%;
+        background-position: center center;
+        }
+        .service{
+            &:hover{
+                a{
+                    transform: translateY(-5px);
+                }
+            }
+            a{
+                color: white !important;
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: $pink !important;
+                height: 60px;
+                width: 60px;
+                i{
+                    line-height: 60px;
+                }
+
+            }
+           
+        }
+        
+    }
+   
   
 }
 

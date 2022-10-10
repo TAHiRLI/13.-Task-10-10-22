@@ -46,6 +46,14 @@
   transform: translate(-50%, -50%);
 }
 
+* ::-moz-selection {
+  background-color: #d01498 !important;
+}
+
+* ::selection {
+  background-color: #d01498 !important;
+}
+
 header {
   background-image: url(../images/Main-slider_pattern.jpg);
   background-size: 100%;
@@ -76,15 +84,40 @@ header nav .dropdown-menu {
 header nav #navbar li {
   position: relative;
 }
+header nav #navbar li a.nav-link {
+  padding: 20px 0;
+}
 header nav #navbar li .submenu {
+  padding: 30px 10px;
   transition: 0.3s ease-in-out;
   transform: scale(0);
   position: absolute;
-  top: 50px;
-  left: 0;
-  width: 350px;
-  height: 40vh;
+  top: 60px;
+  left: -10px;
+  width: 500px;
   background-color: white;
+}
+header nav #navbar li .submenu ul li {
+  padding: 0.3rem 0;
+}
+header nav #navbar li .submenu ul li a {
+  color: black !important;
+  text-decoration: none;
+}
+header nav #navbar li .submenu ul li a:hover {
+  color: #d01498 !important;
+}
+header nav #navbar li .submenu::before {
+  content: "";
+  width: 10px;
+  height: 20px;
+  background-color: white;
+  border: none;
+  outline: none;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -7px;
+  left: 50px;
 }
 header nav #navbar li:hover a {
   color: #3074f6 !important;
@@ -92,49 +125,91 @@ header nav #navbar li:hover a {
 header nav #navbar li:hover .submenu {
   transform: scale(1);
 }
-
-main {
-  height: 200vh;
+header .text-gradient {
+  color: transparent !important;
+  background: linear-gradient(to right, #D01498, #647ECB) !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
 }
-main .items {
+
+main #items-sec .items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
 }
-main .items .item {
+main #items-sec .items .item {
   cursor: pointer;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
-main .items .item:hover {
+main #items-sec .items .item:hover {
   transition: 0.5s;
   transform: translateY(-3px);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.17);
 }
-main .items .item:hover .btn-add {
+main #items-sec .items .item:hover .btn-add {
   opacity: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .items .item a {
+main #items-sec .items .item a {
   color: black;
 }
-main .items .item a:hover {
+main #items-sec .items .item a:hover {
   color: #3074f6 !important;
 }
-main .items .item i {
+main #items-sec .items .item i {
   transition: 0.3s;
 }
-main .items .item i:hover {
+main #items-sec .items .item i:hover {
   color: gray;
 }
-main .items .item .item-title {
+main #items-sec .items .item .item-title {
   border-bottom: 1px solid silver;
 }
-main .items .item .btn-add {
+main #items-sec .items .item .btn-add {
   transition: 0.5s;
   opacity: 0;
   top: 55%;
   left: 50%;
   transform: translateX(-50%);
+}
+main #trending-sec {
+  background-color: #fafafa;
+}
+main #trending-sec .collectors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 15px;
+}
+main #trending-sec .collectors .collector:hover img {
+  transform: translateY(-3px);
+}
+main #trending-sec .collectors .collector a:hover {
+  color: #3074f6 !important;
+}
+main #trending-sec .collectors .collector img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+main #services .bg-img {
+  background-image: url(https://enefti.modeltheme.com/wp-content/uploads/2022/02/Main-services_bg.jpg?id=6716);
+  background-size: 100%;
+  background-position: center center;
+}
+main #services .service:hover a {
+  transform: translateY(-5px);
+}
+main #services .service a {
+  color: white !important;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #d01498 !important;
+  height: 60px;
+  width: 60px;
+}
+main #services .service a i {
+  line-height: 60px;
 }/*# sourceMappingURL=main.css.map */
