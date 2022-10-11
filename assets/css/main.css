@@ -124,6 +124,9 @@ header .top-nav .right-top .social-media li a {
 header .top-nav .right-top .social-media li a:hover {
   color: gray;
 }
+header nav {
+  position: relative;
+}
 header nav .dropdown-menu {
   background-color: white;
   width: 2 80%;
@@ -135,6 +138,7 @@ header nav #navbar li {
   position: relative;
 }
 header nav #navbar li a.nav-link {
+  color: white !important;
   padding: 20px 0;
 }
 header nav #navbar li .submenu {
@@ -174,6 +178,21 @@ header nav #navbar li:hover a {
 }
 header nav #navbar li:hover .submenu {
   transform: scale(1);
+}
+header nav #nav-acordion {
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  color: black;
+  width: 100%;
+  left: 0;
+}
+header nav #nav-acordion a {
+  color: black !important;
+  text-decoration: none;
+}
+header nav #nav-acordion a:hover {
+  color: #d01498 !important;
 }
 header .text-gradient {
   color: transparent !important;

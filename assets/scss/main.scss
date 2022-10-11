@@ -68,6 +68,7 @@ header{
     }
     }
     nav{
+        position: relative;
          .dropdown-menu {
             background-color: white;
             width: 2    80%;
@@ -77,10 +78,13 @@ header{
          }
 
          #navbar{
+         
 
+          
             li{
                 position: relative;
                 a.nav-link{
+                    color:white!important;
                    padding : 20px 0;
                 }
                
@@ -133,6 +137,22 @@ header{
                     }
                     
                 }
+            }
+         }
+         #nav-acordion{
+            position: absolute;
+            top: 100%;
+            background-color: white;
+            color: black;
+            width: 100%;
+            left: 0;
+            a{
+                color: black !important;
+                text-decoration: none;
+                &:hover{
+                    color: $pink !important;
+                }
+
             }
          }
 
